@@ -1,9 +1,9 @@
 {
-    "name": "oneup/acl-bundle",
+    "name": "albegali/acl-bundle",
     "type": "symfony-bundle",
     "description": "The missing link between Symfony`s Acl implementation and your application.",
     "keywords": ["symfony2", "acl", "security"],
-    "homepage": "http://1up.io",
+    "homepage": "http://albegali.io",
     "license": "MIT",
     "authors": [
         {
