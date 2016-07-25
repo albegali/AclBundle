@@ -1,6 +1,6 @@
 <?php
 
-namespace Oneup\AclBundle\Tests\Model;
+namespace Albegali\AclBundle\Tests\Model;
 
 use Symfony\Component\Security\Acl\Dbal\Schema;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
@@ -47,7 +47,7 @@ abstract class AbstractSecurityTest extends WebTestCase
             $this->connection->exec($sql);
         }
 
-        $this->manager = $this->container->get('oneup_acl.manager');
+        $this->manager = $this->container->get('albegali_acl.manager');
 
         $this->object1 = new SomeObject(1);
         $this->object2 = new SomeObject(2);

@@ -4,7 +4,7 @@
 queries for performance reasons. If you however choose to use Doctrine ORM, there are some more handy features this bundle
 brings along.
 
-Inherently, Acl entries won't be deleted once the corresponding domain object is removed (default behaviour of the bundle). The OneupAclBundle comes with a `RemoveListener`
+Inherently, Acl entries won't be deleted once the corresponding domain object is removed (default behaviour of the bundle). The AlbegaliAclBundle comes with a `RemoveListener`
 which does this, if you enable it.
 
 ### Turn on acl removal in configuration
@@ -14,7 +14,7 @@ Do so by setting the `remove_orphans` setting to `true`. So if you have the ORM 
 ```yaml
 # app/config/config.yml
 
-oneup_acl:
+albegali_acl:
     remove_orphans: true
 ```
 
@@ -27,7 +27,7 @@ You can use the `DomainObject` annotation to enable acl removal for a specific e
 
 namespace Acme\DemoBundle\Entity;
 
-use Oneup\AclBundle\Annotation as Acl;
+use Albegali\AclBundle\Annotation as Acl;
 
 /**
  * @Acl\DomainObject(remove=true)
@@ -48,7 +48,7 @@ You can use the `DomainObject` annotation to opt-out of acl removal for a specif
 
 namespace Acme\DemoBundle\Entity;
 
-use Oneup\AclBundle\Annotation as Acl;
+use Albegali\AclBundle\Annotation as Acl;
 
 /**
  * @Acl\DomainObject(remove=false)

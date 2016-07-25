@@ -12,7 +12,7 @@ namespace Acme\DemoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Acl\Permission\MaskBuilder;
-use Oneup\AclBundle\Mapping\Annotation as Acl;
+use Albegali\AclBundle\Mapping\Annotation as Acl;
 
 /**
  * @ORM\Entity

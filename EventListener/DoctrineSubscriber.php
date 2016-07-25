@@ -1,6 +1,6 @@
 <?php
 
-namespace Oneup\AclBundle\EventListener;
+namespace Albegali\AclBundle\EventListener;
 
 use Doctrine\Common\EventSubscriber;
 use Doctrine\Common\EventArgs;
@@ -17,8 +17,8 @@ class DoctrineSubscriber implements EventSubscriber
 
     public function postPersist(EventArgs $args)
     {
-        $chain = $this->container->get('oneup_acl.driver_chain');
-        $manager = $this->container->get('oneup_acl.manager');
+        $chain = $this->container->get('albegali_acl.driver_chain');
+        $manager = $this->container->get('albegali_acl.manager');
 
         if ($args instanceof \Doctrine\ODM\MongoDB\Event\LifecycleEventArgs) {
             $entity = $args->getDocument();
@@ -44,9 +44,9 @@ class DoctrineSubscriber implements EventSubscriber
 
     public function preRemove(EventArgs $args)
     {
-        $chain = $this->container->get('oneup_acl.driver_chain');
-        $manager = $this->container->get('oneup_acl.manager');
-        $remove = $this->container->getParameter('oneup_acl.remove_orphans');
+        $chain = $this->container->get('albegali_acl.driver_chain');
+        $manager = $this->container->get('albegali_acl.manager');
+        $remove = $this->container->getParameter('albegali_acl.remove_orphans');
 
         if ($args instanceof \Doctrine\ODM\MongoDB\Event\LifecycleEventArgs) {
             $entity = $args->getDocument();

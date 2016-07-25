@@ -1,6 +1,6 @@
 <?php
 
-namespace Oneup\AclBundle\Security\Acl\Model;
+namespace Albegali\AclBundle\Security\Acl\Model;
 
 use Symfony\Component\Security\Acl\Domain\ObjectIdentity;
 use Symfony\Component\Security\Acl\Domain\RoleSecurityIdentity;

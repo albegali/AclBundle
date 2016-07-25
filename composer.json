@@ -43,8 +43,8 @@
     },
 
     "autoload": {
-        "psr-0": { "Oneup\\AclBundle": "" }
+        "psr-0": { "Albegali\\AclBundle": "" }
     },
 
-    "target-dir": "Oneup/AclBundle"
+    "target-dir": "Albegali/AclBundle"
 }

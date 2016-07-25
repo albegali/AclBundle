@@ -1,8 +1,8 @@
 <?php
 
-namespace Oneup\AclBundle\Tests\Security\Acl\Manager;
+namespace Albegali\AclBundle\Tests\Security\Acl\Manager;
 
-use Oneup\AclBundle\Tests\Model\AbstractSecurityTest;
+use Albegali\AclBundle\Tests\Model\AbstractSecurityTest;
 
 class AclManagerClassFieldPermissionTest extends AbstractSecurityTest
 {

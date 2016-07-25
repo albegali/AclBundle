@@ -15,7 +15,7 @@ class AppKernel extends Kernel
             //new JMS\SerializerBundle\JMSSerializerBundle($this),
 
             // bundle to test
-            new Oneup\AclBundle\OneupAclBundle(),
+            new Albegali\AclBundle\AlbegaliAclBundle(),
         );
 
         return $bundles;

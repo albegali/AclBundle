@@ -1,8 +1,8 @@
 <?php
 
-namespace Oneup\AclBundle\Tests\Security\Acl\Manager;
+namespace Albegali\AclBundle\Tests\Security\Acl\Manager;
 
-use Oneup\AclBundle\Tests\Model\AbstractSecurityTest;
+use Albegali\AclBundle\Tests\Model\AbstractSecurityTest;
 use Symfony\Component\HttpKernel\Kernel;
 
 class AclManagerTest extends AbstractSecurityTest
@@ -67,7 +67,7 @@ class AclManagerTest extends AbstractSecurityTest
 
     public function testIfAclManagerLoads()
     {
-        $this->assertInstanceOf('Oneup\AclBundle\Security\Acl\Model\AclManagerInterface', $this->manager);
+        $this->assertInstanceOf('Albegali\AclBundle\Security\Acl\Model\AclManagerInterface', $this->manager);
     }
 
     public function testIfAclManagerPropagatesIsGrantedCalls()

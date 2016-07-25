@@ -1,9 +1,9 @@
 <?php
 
-namespace Oneup\AclBundle\Tests\Annotation;
+namespace Albegali\AclBundle\Tests\Annotation;
 
 use Doctrine\Common\Annotations\SimpleAnnotationReader;
-use Oneup\AclBundle\Mapping\Annotation as Acl;
+use Albegali\AclBundle\Mapping\Annotation as Acl;
 
 class DomainObjectTest extends \PHPUnit_Framework_TestCase
 {
@@ -17,9 +17,9 @@ class DomainObjectTest extends \PHPUnit_Framework_TestCase
         $classPermission = new Acl\ClassPermission(array());
         $propertyPermission = new Acl\PropertyPermission(array());
 
-        $this->assertInstanceOf('Oneup\AclBundle\Mapping\Annotation\DomainObject', $domainObject);
-        $this->assertInstanceOf('Oneup\AclBundle\Mapping\Annotation\ClassPermission', $classPermission);
-        $this->assertInstanceOf('Oneup\AclBundle\Mapping\Annotation\PropertyPermission', $propertyPermission);
+        $this->assertInstanceOf('Albegali\AclBundle\Mapping\Annotation\DomainObject', $domainObject);
+        $this->assertInstanceOf('Albegali\AclBundle\Mapping\Annotation\ClassPermission', $classPermission);
+        $this->assertInstanceOf('Albegali\AclBundle\Mapping\Annotation\PropertyPermission', $propertyPermission);
     }
 
     public function testIfAnnotationIsLoadable()
@@ -27,7 +27,7 @@ class DomainObjectTest extends \PHPUnit_Framework_TestCase
         $annotations = $this->getDomainObjectAnnotations();
 
         $this->assertCount(1, $annotations);
-        $this->assertInstanceOf('Oneup\AclBundle\Mapping\Annotation\DomainObject', $annotations[0]);
+        $this->assertInstanceOf('Albegali\AclBundle\Mapping\Annotation\DomainObject', $annotations[0]);
     }
 
     public function testIfNestingAnnotationsWorks()
@@ -36,7 +36,7 @@ class DomainObjectTest extends \PHPUnit_Framework_TestCase
         $classPermissions = $annotation->getClassPermissions();
 
         $this->assertCount(1, $classPermissions);
-        $this->assertInstanceOf('Oneup\AclBundle\Mapping\Annotation\ClassPermission', $classPermissions[0]);
+        $this->assertInstanceOf('Albegali\AclBundle\Mapping\Annotation\ClassPermission', $classPermissions[0]);
     }
 
     public function testRemoveKeyInAnnotation()
@@ -63,7 +63,7 @@ class DomainObjectTest extends \PHPUnit_Framework_TestCase
         $this->assertCount(1, $root->getClassPermissions());
 
         foreach ($root->getClassPermissions() as $permission) {
-            $this->assertInstanceOf('Oneup\AclBundle\Mapping\Annotation\ClassPermission', $permission);
+            $this->assertInstanceOf('Albegali\AclBundle\Mapping\Annotation\ClassPermission', $permission);
             $this->assertTrue(is_array($permission->getRoles()));
 
             $roles = $permission->getRoles();
@@ -103,7 +103,7 @@ class DomainObjectTest extends \PHPUnit_Framework_TestCase
         $this->assertCount(2, $root->getClassPermissions());
 
         foreach ($root->getClassPermissions() as $permission) {
-            $this->assertInstanceOf('Oneup\AclBundle\Mapping\Annotation\ClassPermission', $permission);
+            $this->assertInstanceOf('Albegali\AclBundle\Mapping\Annotation\ClassPermission', $permission);
             $this->assertTrue(is_array($permission->getRoles()));
 
             $roles = $permission->getRoles();
@@ -137,9 +137,9 @@ class DomainObjectTest extends \PHPUnit_Framework_TestCase
     protected function getDomainObjectAnnotations()
     {
         $reader = new SimpleAnnotationReader();
-        $reader->addNamespace('Oneup\AclBundle\Mapping\Annotation');
+        $reader->addNamespace('Albegali\AclBundle\Mapping\Annotation');
 
-        $object = new \ReflectionClass('Oneup\AclBundle\Tests\Model\SomeObject');
+        $object = new \ReflectionClass('Albegali\AclBundle\Tests\Model\SomeObject');
 
         return $reader->getClassAnnotations($object);
     }

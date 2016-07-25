@@ -1,6 +1,6 @@
 <?php
 
-namespace Oneup\AclBundle\Command;
+namespace Albegali\AclBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
@@ -27,7 +27,7 @@ class DeleteAclCommand extends ContainerAwareCommand
     protected function configure()
     {
         $this
-            ->setName('oneup:acl:delete')
+            ->setName('albegali:acl:delete')
             ->setDescription('Delete an ACL for an Object')
             ->addArgument(
                 'objectClass',

@@ -1,9 +1,9 @@
 <?php
 
-namespace Oneup\AclBundle\Tests\EventListener;
+namespace Albegali\AclBundle\Tests\EventListener;
 
-use Oneup\AclBundle\Tests\Model\AbstractSecurityTest;
-use Oneup\AclBundle\Tests\Model\SomeObject;
+use Albegali\AclBundle\Tests\Model\AbstractSecurityTest;
+use Albegali\AclBundle\Tests\Model\SomeObject;
 use Symfony\Component\Security\Acl\Permission\MaskBuilder;
 
 class DoctrineSubscriberTest extends AbstractSecurityTest
@@ -14,7 +14,7 @@ class DoctrineSubscriberTest extends AbstractSecurityTest
     {
         parent::setUp();
 
-        $this->listener = $this->container->get('oneup_acl.doctrine_subscriber');
+        $this->listener = $this->container->get('albegali_acl.doctrine_subscriber');
     }
 
     public function testPostPersistListener()

@@ -5,11 +5,11 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="oneup_acl.driver_chain" class="Oneup\AclBundle\Driver\DriverChain" />
+        <service id="albegali_acl.driver_chain" class="Albegali\AclBundle\Driver\DriverChain" />
 
-        <service id="oneup_acl_annotation_driver" class="Oneup\AclBundle\Driver\Annotation\AnnotationDriver">
+        <service id="albegali_acl_annotation_driver" class="Albegali\AclBundle\Driver\Annotation\AnnotationDriver">
             <argument type="service" id="annotation_reader" />
-            <tag name="oneup_acl.driver" />
+            <tag name="albegali_acl.driver" />
         </service>
     </services>
 </container>

@@ -1,13 +1,13 @@
 <?php
 
-namespace Oneup\AclBundle\Tests\Security\Authorization\Acl;
+namespace Albegali\AclBundle\Tests\Security\Authorization\Acl;
 
 use Symfony\Component\Security\Acl\Permission\MaskBuilder;
 use Symfony\Component\Security\Core\User\User;
 use Symfony\Component\Security\Core\Role\Role;
-use Oneup\AclBundle\Tests\Model\SomeOtherObject;
+use Albegali\AclBundle\Tests\Model\SomeOtherObject;
 
-use Oneup\AclBundle\Tests\Model\AbstractSecurityTest;
+use Albegali\AclBundle\Tests\Model\AbstractSecurityTest;
 
 /**
  * AclProviderTest
@@ -27,7 +27,7 @@ class AclProviderTest extends AbstractSecurityTest
     public function testFindObjectIdentitiesForToken()
     {
         $aclProvider = $this->container->get('security.acl.provider');
-        $this->assertInstanceOf('Oneup\AclBundle\Security\Authorization\Acl\AclProvider', $aclProvider);
+        $this->assertInstanceOf('Albegali\AclBundle\Security\Authorization\Acl\AclProvider', $aclProvider);
 
         // empty object identity
         $ret = $aclProvider->findObjectIdentitiesForUser(

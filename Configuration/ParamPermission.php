@@ -1,6 +1,6 @@
 <?php
 
-namespace Oneup\AclBundle\Configuration;
+namespace Albegali\AclBundle\Configuration;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ConfigurationInterface;
 

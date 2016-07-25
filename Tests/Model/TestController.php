@@ -1,10 +1,10 @@
 <?php
 
-namespace Oneup\AclBundle\Tests\Model;
+namespace Albegali\AclBundle\Tests\Model;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-use Oneup\AclBundle\Configuration\ParamPermission;
+use Albegali\AclBundle\Configuration\ParamPermission;
 
 class TestController extends Controller
 {

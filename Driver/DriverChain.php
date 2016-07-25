@@ -1,6 +1,6 @@
 <?php
 
-namespace Oneup\AclBundle\Driver;
+namespace Albegali\AclBundle\Driver;
 
 class DriverChain
 {

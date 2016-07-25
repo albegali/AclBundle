@@ -1,6 +1,6 @@
 <?php
 
-namespace Oneup\AclBundle\DependencyInjection;
+namespace Albegali\AclBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\Loader;
@@ -9,7 +9,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Security\Acl\Domain\PermissionGrantingStrategy;
 
-class OneupAclExtension extends Extension
+class AlbegaliAclExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
     {
@@ -37,7 +37,7 @@ class OneupAclExtension extends Extension
             )
         );
 
-        $container->setParameter('oneup_acl.remove_orphans', $config['remove_orphans']);
-        $container->setParameter('oneup_acl.permission_strategy', $strategy);
+        $container->setParameter('albegali_acl.remove_orphans', $config['remove_orphans']);
+        $container->setParameter('albegali_acl.permission_strategy', $strategy);
     }
 }

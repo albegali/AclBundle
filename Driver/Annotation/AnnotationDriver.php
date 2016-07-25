@@ -1,9 +1,9 @@
 <?php
 
-namespace Oneup\AclBundle\Driver\Annotation;
+namespace Albegali\AclBundle\Driver\Annotation;
 
 use Doctrine\Common\Annotations\Reader;
-use Oneup\AclBundle\Driver\DriverInterface;
+use Albegali\AclBundle\Driver\DriverInterface;
 
 class AnnotationDriver implements DriverInterface
 {
@@ -17,7 +17,7 @@ class AnnotationDriver implements DriverInterface
     public function readMetaData(\ReflectionClass $class)
     {
         $data = null;
-        $annotation = $this->reader->getClassAnnotation($class, 'Oneup\AclBundle\Mapping\Annotation\DomainObject');
+        $annotation = $this->reader->getClassAnnotation($class, 'Albegali\AclBundle\Mapping\Annotation\DomainObject');
 
         if ($annotation) {
             $data = array(
@@ -37,7 +37,7 @@ class AnnotationDriver implements DriverInterface
             $properties = $class->getProperties();
 
             foreach ($properties as $property) {
-                $propAnnotation = $this->reader->getPropertyAnnotation($property, 'Oneup\AclBundle\Mapping\Annotation\PropertyPermission');
+                $propAnnotation = $this->reader->getPropertyAnnotation($property, 'Albegali\AclBundle\Mapping\Annotation\PropertyPermission');
 
                 if ($propAnnotation) {
                     foreach ($propAnnotation->getRoles() as $role => $mask) {

@@ -1,18 +1,18 @@
 # Use the AclManager
 
 One of the main purposes of this bundle is to provide a service which makes using Acl in your Symfony2 applications a breeze.
-After activation of this bundle, there is a registered service named `oneup_acl.manager` in the service locator.
+After activation of this bundle, there is a registered service named `albegali_acl.manager` in the service locator.
 
 ```php
-$manager = $container->get('oneup_acl.manager');
+$manager = $container->get('albegali_acl.manager');
 ```
 
-The retrieved AclManager implements the [`AclManagerInterace`](https://github.com/1up-lab/OneupAclBundle/blob/master/Security/Acl/Model/AclManagerInterface.php) and therefore exposes several methods for you to use.
+The retrieved AclManager implements the [`AclManagerInterace`](https://github.com/1up-lab/AlbegaliAclBundle/blob/master/Security/Acl/Model/AclManagerInterface.php) and therefore exposes several methods for you to use.
 
 ```php
 <?php
 
-namespace Oneup\AclBundle\Security\Acl\Model;
+namespace Albegali\AclBundle\Security\Acl\Model;
 
 interface AclManagerInterface
 {
@@ -50,7 +50,7 @@ If you want to perform a permission check use the `isGranted` method. Both param
 
 ```php
 // check if current logged in use has the role ROLE_ADMIN
-$manager = $this->get('oneup_acl.manager');
+$manager = $this->get('albegali_acl.manager');
 $manager->isGranted('ROLE_ADMIN');
 ```
 
@@ -61,7 +61,7 @@ More interesting is the usage of Acl features. You can check permissions on doma
 $product = $repository->find(1);
 
 // check if the current logged in user has the permission to view the product
-$manager = $this->get('oneup_acl.manager');
+$manager = $this->get('albegali_acl.manager');
 $manager->isGranted('VIEW', $product);
 ```
 
@@ -74,7 +74,7 @@ $manager->isGranted('VIEW', $product, 'name');
 
 ## Add and revoke permissions
 
-The OneupAclBundle supports for types of permissions (object-, class-, object field- and class field permissions). All of them are represented with similar methods in the `AclManager`.
+The AlbegaliAclBundle supports for types of permissions (object-, class-, object field- and class field permissions). All of them are represented with similar methods in the `AclManager`.
 
 * `add*Permission`: Add a new permission entry. If no Acl for the given domain object exists, it will be created.
 * `set*Permission`: Overwrite existing Acl entries with the given `SecurityIdentity` and mask.

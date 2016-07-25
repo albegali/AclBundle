@@ -1,10 +1,10 @@
 <?php
 
-namespace Oneup\AclBundle\Tests\Model;
+namespace Albegali\AclBundle\Tests\Model;
 
-use Oneup\AclBundle\Mapping\Annotation\DomainObject;
-use Oneup\AclBundle\Mapping\Annotation\ClassPermission;
-use Oneup\AclBundle\Mapping\Annotation\PropertyPermission;
+use Albegali\AclBundle\Mapping\Annotation\DomainObject;
+use Albegali\AclBundle\Mapping\Annotation\ClassPermission;
+use Albegali\AclBundle\Mapping\Annotation\PropertyPermission;
 
 /**
  * Masks from Symfony\Component\Security\Acl\Permission\MaskBuilder

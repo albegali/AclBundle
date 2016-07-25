@@ -1,13 +1,13 @@
 <?php
 
-namespace Oneup\AclBundle\EventListener;
+namespace Albegali\AclBundle\EventListener;
 
 use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
-use Oneup\AclBundle\Security\Acl\Model\AclManagerInterface;
+use Albegali\AclBundle\Security\Acl\Model\AclManagerInterface;
 
 class PermissionListener implements EventSubscriberInterface
 {

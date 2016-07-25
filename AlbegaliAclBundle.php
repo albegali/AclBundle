@@ -1,13 +1,13 @@
 <?php
 
-namespace Oneup\AclBundle;
+namespace Albegali\AclBundle;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use Oneup\AclBundle\DependencyInjection\Compiler\MetaDataCompilerPass;
-use Oneup\AclBundle\DependencyInjection\Compiler\OverrideServiceCompilerPass;
+use Albegali\AclBundle\DependencyInjection\Compiler\MetaDataCompilerPass;
+use Albegali\AclBundle\DependencyInjection\Compiler\OverrideServiceCompilerPass;
 
-class OneupAclBundle extends Bundle
+class AlbegaliAclBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {

@@ -1,11 +1,11 @@
 # Getting started
 
-The OneupAclBundle is a Symfony2 bundle which is primary tested against version 2.3 of the framework. Yet, there is the
+The AlbegaliAclBundle is a Symfony2 bundle which is primary tested against version 2.3 of the framework. Yet, there is the
 possibility that this bundle also works for version 2.1 and following.
 
 ## Installation
 
-Installation is as easy as pie! Just follow these three steps to download, install and setup the OneupAclBundle.
+Installation is as easy as pie! Just follow these three steps to download, install and setup the AlbegaliAclBundle.
 
 * Download the bundle using composer
 * Enable the bundle in your AppKernel
@@ -13,21 +13,21 @@ Installation is as easy as pie! Just follow these three steps to download, insta
 
 ### Step 1: Download the bundle
 
-Add OneupAclBundle to your composer.json using the following construct:
+Add AlbegaliAclBundle to your composer.json using the following construct:
 
 ```js
 {
     "require": {
-        "oneup/acl-bundle": "~0.10"
+        "albegali/acl-bundle": "~0.10"
     }
 }
 ```
 
 Now tell composer to download the bundle by running the following command:
 
-    $> php composer.phar update oneup/acl-bundle
+    $> php composer.phar update albegali/acl-bundle
 
-Composer will now fetch and install this bundle in the vendor directory ```vendor/oneup```
+Composer will now fetch and install this bundle in the vendor directory ```vendor/albegali```
 
 ### Step 2: Enable the bundle
 
@@ -41,7 +41,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Oneup\AclBundle\OneupAclBundle(),
+        new Albegali\AclBundle\AlbegaliAclBundle(),
     );
 }
 ```
@@ -68,7 +68,7 @@ along with sane defaults.
 To use the Acl features this bundle provides, just retrieve the correct manager service.
 
 ```php
-$manager = $container->get('oneup_acl.manager');
+$manager = $container->get('albegali_acl.manager');
 $manager->isGranted('EDIT', $object);
 ```
 

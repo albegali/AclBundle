@@ -1,12 +1,12 @@
 <?php
 
-namespace Oneup\AclBundle\Security\Acl\Manager;
+namespace Albegali\AclBundle\Security\Acl\Manager;
 
 use Symfony\Component\Security\Acl\Domain\AclCollectionCache;
 use Symfony\Component\Security\Acl\Model\MutableAclProviderInterface;
 use Symfony\Component\Security\Acl\Model\ObjectIdentityRetrievalStrategyInterface;
 
-use Oneup\AclBundle\Security\Acl\Model\AbstractAclManager;
+use Albegali\AclBundle\Security\Acl\Model\AbstractAclManager;
 
 class AclManager extends AbstractAclManager
 {

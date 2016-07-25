@@ -1,15 +1,15 @@
 <?php
 
-namespace Oneup\AclBundle\Tests\EventListener;
+namespace Albegali\AclBundle\Tests\EventListener;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Acl\Permission\MaskBuilder;
 
-use Oneup\AclBundle\Configuration\ParamPermission;
-use Oneup\AclBundle\EventListener\PermissionListener;
-use Oneup\AclBundle\Tests\Model\AbstractSecurityTest;
-use Oneup\AclBundle\Tests\Model\TestController;
-use Oneup\AclBundle\Tests\Model\SomeObject;
+use Albegali\AclBundle\Configuration\ParamPermission;
+use Albegali\AclBundle\EventListener\PermissionListener;
+use Albegali\AclBundle\Tests\Model\AbstractSecurityTest;
+use Albegali\AclBundle\Tests\Model\TestController;
+use Albegali\AclBundle\Tests\Model\SomeObject;
 
 class PermissionListenerTest extends AbstractSecurityTest
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Oneup\AclBundle\Mapping\Annotation;
+namespace Albegali\AclBundle\Mapping\Annotation;
 
 abstract class AbstractPermission
 {

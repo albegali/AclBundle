@@ -1,6 +1,6 @@
 <?php
 
-namespace Oneup\AclBundle\Security\Acl\Manager;
+namespace Albegali\AclBundle\Security\Acl\Manager;
 
 class AclPermission
 {

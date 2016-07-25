@@ -1,6 +1,6 @@
 <?php
 
-namespace Oneup\AclBundle\Security\Authorization\Acl;
+namespace Albegali\AclBundle\Security\Authorization\Acl;
 
 use Doctrine\DBAL\Connection;
 use Symfony\Component\Security\Acl\Domain\RoleSecurityIdentity;

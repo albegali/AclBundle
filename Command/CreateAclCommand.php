@@ -1,6 +1,6 @@
 <?php
 
-namespace Oneup\AclBundle\Command;
+namespace Albegali\AclBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
@@ -28,7 +28,7 @@ class CreateAclCommand extends ContainerAwareCommand
     protected function configure()
     {
         $this
-            ->setName('oneup:acl:create')
+            ->setName('albegali:acl:create')
             ->setDescription('Create an ACL for an Object')
             ->addArgument(
                 'objectClass',
