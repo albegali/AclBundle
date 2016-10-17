@@ -3,7 +3,7 @@ Testing the Bundle
 
 In order to run the UnitTests of this bundle, clone it first
 
-    $> git clone git://github.com/1up-lab/AlbegaliAclBundle.git
+    $> git clone git://github.com/albegali/AlbegaliAclBundle.git
 
 After the cloning process, install all vendors by running the corresponding composer command.
 

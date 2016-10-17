@@ -7,7 +7,7 @@ After activation of this bundle, there is a registered service named `albegali_a
 $manager = $container->get('albegali_acl.manager');
 ```
 
-The retrieved AclManager implements the [`AclManagerInterace`](https://github.com/1up-lab/AlbegaliAclBundle/blob/master/Security/Acl/Model/AclManagerInterface.php) and therefore exposes several methods for you to use.
+The retrieved AclManager implements the [`AclManagerInterace`](https://github.com/albegali/AlbegaliAclBundle/blob/master/Security/Acl/Model/AclManagerInterface.php) and therefore exposes several methods for you to use.
 
 ```php
 <?php

@@ -1,14 +1,14 @@
-AlbegaliAclBundle
+AclBundle
 ==============
 
-The AlbegaliAclBundle provides easy to use Acl features for your Symfony2 application. It is built on top of the Security component and comes with
+The AclBundle provides easy to use Acl features for your Symfony2 application. It is built on top of the Security component and comes with
 handy features including:
 
-* an [Acl manager](https://github.com/1up-lab/AlbegaliAclBundle/blob/master/Resources/doc/manager.md), your entry point.
-* [Doctrine listeners](https://github.com/1up-lab/AlbegaliAclBundle/blob/master/Resources/doc/removal.md) for automatically remove Acl entries once an entity is deleted.
-* [Check request parameters](https://github.com/1up-lab/AlbegaliAclBundle/blob/master/Resources/doc/controller.md) against your access control lists.
+* an [Acl manager](https://github.com/albegali/AclBundle/blob/master/Resources/doc/manager.md), your entry point.
+* [Doctrine listeners](https://github.com/albegali/AclBundle/blob/master/Resources/doc/removal.md) for automatically remove Acl entries once an entity is deleted.
+* [Check request parameters](https://github.com/albegali/AclBundle/blob/master/Resources/doc/controller.md) against your access control lists.
 
-[![Build Status](https://travis-ci.org/1up-lab/AlbegaliAclBundle.png)](https://travis-ci.org/1up-lab/AlbegaliAclBundle)
+[![Build Status](https://travis-ci.org/albegali/AclBundle.png)](https://travis-ci.org/albegali/AclBundle)
 [![Total Downloads](https://poser.pugx.org/albegali/acl-bundle/downloads.png)](https://packagist.org/packages/albegali/acl-bundle)
 
 Documentation
@@ -16,11 +16,11 @@ Documentation
 
 The entry point of the documentation can be found in the file `Resources/docs/index.md`
 
-[Read the documentation for master](https://github.com/1up-lab/AlbegaliAclBundle/blob/master/Resources/doc/index.md)
+[Read the documentation for master](https://github.com/albegali/AclBundle/blob/master/Resources/doc/index.md)
 
-[Read the documentation for v0.10.1](https://github.com/1up-lab/AlbegaliAclBundle/blob/v0.10.1/Resources/doc/index.md)
+[Read the documentation for v0.10.1](https://github.com/albegali/AclBundle/blob/v0.10.1/Resources/doc/index.md)
 
-[Read the documentation for v0.9.1](https://github.com/1up-lab/AlbegaliAclBundle/blob/v0.9.1/Resources/doc/index.md)
+[Read the documentation for v0.9.1](https://github.com/albegali/AclBundle/blob/v0.9.1/Resources/doc/index.md)
 
 Upgrade Notes
 -------------
@@ -40,7 +40,7 @@ This bundle is under the MIT license. See the complete license in the bundle:
 Reporting an issue or a feature request
 ---------------------------------------
 
-Issues and feature requests are tracked in the [Github issue tracker](https://github.com/1up-lab/AlbegaliAclBundle/issues).
+Issues and feature requests are tracked in the [Github issue tracker](https://github.com/albegali/AclBundle/issues).
 
 When reporting a bug, it may be a good idea to reproduce it in a basic project
 built using the [Symfony Standard Edition](https://github.com/symfony/symfony-standard)
