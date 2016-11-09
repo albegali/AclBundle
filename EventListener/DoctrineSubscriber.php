@@ -60,6 +60,8 @@ class DoctrineSubscriber implements EventSubscriber
         if (($remove && (!isset($metaData['remove']) || $metaData['remove'])) ||
             (!$remove && isset($metaData['remove']) && $metaData['remove'])
         ) {
+            $manager->revokeAllClassPermissions($entity);
+            $manager->revokeAllClassFieldPermissions($entity);
             $manager->revokeAllObjectPermissions($entity);
             $manager->revokeAllObjectFieldPermissions($entity);
         }

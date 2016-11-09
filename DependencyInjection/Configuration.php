@@ -14,7 +14,7 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->booleanNode('remove_orphans')->defaultFalse()->end()
+                ->booleanNode('remove_orphans')->defaultTrue()->end()
                 ->enumNode('permission_strategy')
                     ->values(array('any', 'all', 'equal'))
                     ->defaultValue('all')
