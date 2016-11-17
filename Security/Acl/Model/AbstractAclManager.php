@@ -2,6 +2,7 @@
 
 namespace Albegali\AclBundle\Security\Acl\Model;
 
+use Albegali\AclBundle\Security\Authorization\Acl\AclProvider;
 use Symfony\Component\Security\Acl\Domain\ObjectIdentity;
 use Symfony\Component\Security\Acl\Domain\RoleSecurityIdentity;
 use Symfony\Component\Security\Acl\Domain\UserSecurityIdentity;
@@ -9,14 +10,17 @@ use Symfony\Component\Security\Acl\Exception\AclNotFoundException;
 use Symfony\Component\Security\Acl\Model\SecurityIdentityInterface;
 use Symfony\Component\Security\Acl\Voter\FieldVote;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
+use Symfony\Component\Security\Core\Authorization\AuthorizationChecker;
 use Symfony\Component\Security\Core\Role\RoleInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\Common\Util\ClassUtils;
 
 abstract class AbstractAclManager implements AclManagerInterface
 {
+    /** @return AclProvider */
     abstract protected function getProvider();
     abstract protected function getTokenStorage();
+    /** @return AuthorizationChecker */
     abstract protected function getAuthorizationChecker();
     abstract protected function getObjectIdentityStrategy();
     abstract protected function getPermissionStrategy();
@@ -415,9 +419,13 @@ abstract class AbstractAclManager implements AclManagerInterface
         $acl = $this->getAclFor($object);
 
         if ($type == 'object') {
-            $acl->insertObjectAce($securityIdentity, $mask, 0, true, $this->getPermissionStrategy());
+            if (empty($acl->getObjectAces())) {
+                $acl->insertObjectAce($securityIdentity, $mask, 0, true, $this->getPermissionStrategy());
+            }
         } elseif ($type == 'class') {
-            $acl->insertClassAce($securityIdentity, $mask, 0, true, $this->getPermissionStrategy());
+            if (empty($acl->getClassAces())) {
+                $acl->insertClassAce($securityIdentity, $mask, 0, true, $this->getPermissionStrategy());
+            }
         } else {
             throw new \InvalidArgumentException('This AceType is not valid.');
         }
@@ -437,9 +445,13 @@ abstract class AbstractAclManager implements AclManagerInterface
         $acl = $this->getAclFor($object);
 
         if ($type == 'object') {
-            $acl->insertObjectFieldAce($field, $securityIdentity, $mask, 0, true, $this->getPermissionStrategy());
+            if (empty($acl->getObjectFieldAces($field))) {
+                $acl->insertObjectFieldAce($field, $securityIdentity, $mask, 0, true, $this->getPermissionStrategy());
+            }
         } elseif ($type == 'class') {
-            $acl->insertClassFieldAce($field, $securityIdentity, $mask, 0, true, $this->getPermissionStrategy());
+            if (empty($acl->getClassFieldAces($field))) {
+                $acl->insertClassFieldAce($field, $securityIdentity, $mask, 0, true, $this->getPermissionStrategy());
+            }
         } else {
             throw new \InvalidArgumentException('This AceType is not valid');
         }
