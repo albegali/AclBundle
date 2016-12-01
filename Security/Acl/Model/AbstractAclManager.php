@@ -418,12 +418,23 @@ abstract class AbstractAclManager implements AclManagerInterface
         $securityIdentity = $this->createSecurityIdentity($identity);
         $acl = $this->getAclFor($object);
 
+        $insertAce = true;
         if ($type == 'object') {
-            if (empty($acl->getObjectAces())) {
+            foreach ($acl->getObjectAces() as $objectAce) {
+                if ($objectAce->getSecurityIdentity() == $securityIdentity) {
+                    $insertAce = false;
+                }
+            }
+            if ($insertAce) {
                 $acl->insertObjectAce($securityIdentity, $mask, 0, true, $this->getPermissionStrategy());
             }
         } elseif ($type == 'class') {
-            if (empty($acl->getClassAces())) {
+            foreach ($acl->getClassAces() as $classAce) {
+                if ($classAce->getSecurityIdentity() == $securityIdentity) {
+                    $insertAce = false;
+                }
+            }
+            if ($insertAce) {
                 $acl->insertClassAce($securityIdentity, $mask, 0, true, $this->getPermissionStrategy());
             }
         } else {
@@ -444,12 +455,23 @@ abstract class AbstractAclManager implements AclManagerInterface
         $securityIdentity = $this->createSecurityIdentity($identity);
         $acl = $this->getAclFor($object);
 
+        $insertAce = true;
         if ($type == 'object') {
-            if (empty($acl->getObjectFieldAces($field))) {
+            foreach ($acl->getObjectFieldAces($field) as $objectFieldAce) {
+                if ($objectFieldAce->getSecurityIdentity() == $securityIdentity) {
+                    $insertAce = false;
+                }
+            }
+            if ($insertAce) {
                 $acl->insertObjectFieldAce($field, $securityIdentity, $mask, 0, true, $this->getPermissionStrategy());
             }
         } elseif ($type == 'class') {
-            if (empty($acl->getClassFieldAces($field))) {
+            foreach ($acl->getClassFieldAces($field) as $classFieldAce) {
+                if ($classFieldAce->getSecurityIdentity() == $securityIdentity) {
+                    $insertAce = false;
+                }
+            }
+            if ($insertAce) {
                 $acl->insertClassFieldAce($field, $securityIdentity, $mask, 0, true, $this->getPermissionStrategy());
             }
         } else {
